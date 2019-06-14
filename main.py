@@ -1,14 +1,16 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.fftpack import fft, ifft
-from scipy.io.wavfile import write
+# from scipy.io.wavfile import write
 import soundfile as sf
+from scipy.io import wavfile as wav
 import sys
 # import pyaudio
 import wave
 
 num = sys.argv[1]
 data, samplerate = sf.read('../SpeechRecognition/test/%s.wav'%num)
+# rate, data = wav.read('../SpeechRecognition/test/%s.wav'%num)
 signalFFT = fft(data)
 fft_range = np.arange(0,len(signalFFT),1)
 

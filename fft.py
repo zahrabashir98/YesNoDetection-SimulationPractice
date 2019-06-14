@@ -60,7 +60,7 @@ fft_range_4 = np.arange(0,len(signalFFT_4),1)
 
 
 chart1 = plt.subplot(221)
-plt.plot(fft_range,signalFFT )
+plt.plot(fft_range,signalFFT)
 
 
 chart1 = plt.subplot(222)
